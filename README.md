@@ -1,8 +1,8 @@
-# **What is this pCDK2i_v1.0?**
+# **What is this pCDK1i_v1.0?**
 
-**pCDK2i** stands for **p**redictor of **CDK2** **i**nhibitor. 
+**pCDK1i** stands for **p**redictor of **CDK1** **i**nhibitor. 
 
-It is an online tool hosted on Google Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1w--caiI-QA31KkU774JaJGgwj9S9g3GO?usp=sharing) that predict the CDK2 inhibitory property (1 = Active, 0 = Inactive) of a small molecule and also visualize the molecule.
+It is an online tool hosted on Google Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qQa0GykEpHXavrGyLAdHvFRQ7JsDrvtI?usp=sharing) that predict the CDK1 inhibitory property (1 = Active, 0 = Inactive) of a small molecule and also visualize the molecule.
 
 ---
 If you use this tool, please cite:
@@ -14,13 +14,11 @@ If you use this tool, please cite:
 
 **How to use this?**
 
-1: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1w--caiI-QA31KkU774JaJGgwj9S9g3GO?usp=sharing)
+1: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qQa0GykEpHXavrGyLAdHvFRQ7JsDrvtI?usp=sharing)
 
 2: Install and import required packages
 
-2: Provide the Smiles of your query moleucle and run the cell
-
-3: Click the icon to visualize the Chemical Space
+3: Provide the Smiles of your query moleucle and run the cell
 
 ------
 
