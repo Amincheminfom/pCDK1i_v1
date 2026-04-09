@@ -5,8 +5,8 @@
 It is an online tool hosted on Google Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qQa0GykEpHXavrGyLAdHvFRQ7JsDrvtI?usp=sharing) that predict the CDK1 inhibitory property (1 = Active, 0 = Inactive) of a small molecule and also visualize the molecule.
 
 ---
-If you use this tool, please cite:
-> Solanki P., Amin S.A., Manhas A. *Integrating machine learning with in silico studies and Quantum Chemistry: Exploring novel compounds through multiscale screening targeting the CDK2 enzyme*. Computers in Biology and Medicine, 2025, 196(Pt A), 110712. DOI: [10.1016/j.compbiomed.2025.110712](https://doi.org/10.1016/j.compbiomed.2025.110712)
+This tool is a part of the manuscript:
+> *Multiscale screening integrating machine learning, molecular dynamics simulations and quantum mechanical calculations to identify novel CDK1 inhibitor targeting cancer*. (under preparation)
 
 ---
 
