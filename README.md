@@ -21,15 +21,16 @@ This tool is a part of the manuscript:
 3: Provide the Smiles of your query moleucle and run the cell
 
 ------
+**Example Smiles:**
 
+*1. Known CDK1 inhibitor* 
+`CN1CC[C@H](c2c(O)cc(O)c3c(=O)cc(-c4ccccc4Cl)oc23)C(O)C1`
 
-Example Smiles:
-1. Known CDK2 inhibitor:
-Nc1ccc(-c2cc(Nc3ccc(S(N)(=O)=O)cc3)[nH]n2)cc1
-2. Known CDK2 Inactive molecule:
-c1ccc2c(c1)ccn2CCCCCCn1ccc2ccccc21
-3. Imatinib:
-Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1
+*2. Known CDK2 Inactive molecule*
+`Cc1cc(Cl)c2cc(C(=O)N[C@H](C)c3ccc(S(=O)(=O)CC(=O)OC(C)(C)C)cc3)n(C)c2c1`
+
+*3. Imatinib*
+`Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1`
 
 ---
 Bugs: If you encounter any bugs, please report the issue to my mail id pharmacist.amin@gmail.com
