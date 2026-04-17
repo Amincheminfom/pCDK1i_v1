@@ -26,7 +26,7 @@ This tool is a part of the manuscript:
 *1. Known CDK1 inhibitor* 
 `CN1CC[C@H](c2c(O)cc(O)c3c(=O)cc(-c4ccccc4Cl)oc23)C(O)C1`
 
-*2. Known CDK2 Inactive molecule*
+*2. Known CDK1 Inactive molecule*
 `Cc1cc(Cl)c2cc(C(=O)N[C@H](C)c3ccc(S(=O)(=O)CC(=O)OC(C)(C)C)cc3)n(C)c2c1`
 
 *3. Imatinib*
