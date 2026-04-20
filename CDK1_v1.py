@@ -7,6 +7,8 @@ import joblib
 import io
 
 from rdkit import Chem, DataStructs
+#from rdkit import Chem, DataStructs
+from rdkit.Chem import rdFingerprintGenerator
 
 from PIL import Image
 
