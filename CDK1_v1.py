@@ -51,14 +51,17 @@ def mol_to_array(mol, size=(300, 300)):
     except:
         try:
             # Fallback: simple PIL drawing
-            from rdkit.Chem import Draw
+            #from rdkit.Chem import Draw
             return Draw.MolToImage(mol, size=size)
 
         except:
             return None
 
-from rdkit.Chem import Draw
-
+#from rdkit.Chem import Draw
+def get_molecule_image(smiles):
+    url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/{smiles}/PNG"
+    return url
+    
 def generate_2d_image(smiles, img_size=(300, 300)):
     try:
         mol = Chem.MolFromSmiles(smiles)
@@ -181,15 +184,24 @@ if mode == "Single Molecule Prediction":
                     res_col1, res_col2 = st.columns([1, 1.2])
 
                     with res_col1:
-                        # mol_img = mol_to_array(mol)
-                        mol_img = generate_2d_image(smiles_input)
-                        if mol_img:
-                            #st.image(mol_img, use_container_width=True)
-                            st.image(mol_img, caption="Query Molecule", use_container_width=True)
-                        else:
-                            #st.warning("⚠️ Molecule visualization not supported.")
-                            st.warning("Invalid SMILES or image generation failed.")
+                        try:
+                            img_url = get_molecule_image(smiles_input)
+                            st.image(img_url, use_container_width=True)
+                        except:
+                            st.warning("Unable to fetch molecule image.")
                             st.code(smiles_input)
+                        # mol_img = mol_to_array(mol)
+                        #img_url = get_molecule_image(smiles_input)
+                                            
+                        #mol_img = generate_2d_image(smiles_input)
+                        
+                        #if mol_img:
+                            #st.image(mol_img, use_container_width=True)
+                         #   st.image(mol_img, caption="Query Molecule", use_container_width=True)
+                        #else:
+                            #st.warning("⚠️ Molecule visualization not supported.")
+                            #st.warning("Invalid SMILES or image generation failed.")
+                            #st.code(smiles_input)
                             #st.warning("⚠️ Molecule visualization not supported in this environment.")
                         #st.image(mol_img, caption="Query Molecule", width=220)
                         #st.image(mol_img, caption="Query Molecule", use_container_width=True)
@@ -314,6 +326,6 @@ elif mode == "Batch Prediction":
 with st.expander("Contact"):
     st.write("""
     **Dr. Sk. Abdul Amin**  
-    📧 pharmacist.amin@gmail.com  
-    🔗 https://github.com/Amincheminform
+      pharmacist.amin@gmail.com  
+      https://github.com/Amincheminform
     """)
