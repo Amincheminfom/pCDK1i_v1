@@ -7,8 +7,6 @@ import joblib
 import io
 
 from rdkit import Chem, DataStructs
-from rdkit.Chem.Draw import rdMolDraw2D
-from rdkit.Chem import rdFingerprintGenerator
 
 from PIL import Image
 
@@ -39,11 +37,15 @@ section[data-testid="stSidebar"] div[role="radiogroup"] label {
 # --------- Utility Functions ---------
 
 def mol_to_array(mol, size=(300, 300)):
-    drawer = rdMolDraw2D.MolDraw2DCairo(size[0], size[1])
-    drawer.DrawMolecule(mol)
-    drawer.FinishDrawing()
-    img_data = drawer.GetDrawingText()
-    return Image.open(io.BytesIO(img_data))
+    try:
+        from rdkit.Chem.Draw import rdMolDraw2D  # ✅ import here only
+        drawer = rdMolDraw2D.MolDraw2DCairo(size[0], size[1])
+        drawer.DrawMolecule(mol)
+        drawer.FinishDrawing()
+        img_data = drawer.GetDrawingText()
+        return Image.open(io.BytesIO(img_data))
+    except Exception as e:
+        return None
 
 def pred_label(pred):
     return "### **Active**" if pred == 1 else "### **Inactive**"
@@ -157,8 +159,12 @@ if mode == "Single Molecule Prediction":
 
                     with res_col1:
                         mol_img = mol_to_array(mol)
+                        if mol_img:
+                            st.image(mol_img, use_container_width=True)
+                        else:
+                            st.warning("⚠️ Molecule visualization not supported in this environment.")
                         #st.image(mol_img, caption="Query Molecule", width=220)
-                        st.image(mol_img, caption="Query Molecule", use_container_width=True)
+                        #st.image(mol_img, caption="Query Molecule", use_container_width=True)
 
                     with res_col2:
                         st.markdown(
