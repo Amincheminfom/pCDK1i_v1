@@ -40,14 +40,22 @@ section[data-testid="stSidebar"] div[role="radiogroup"] label {
 
 def mol_to_array(mol, size=(300, 300)):
     try:
-        from rdkit.Chem.Draw import rdMolDraw2D  # ✅ import here only
+        # Try advanced drawing (best quality)
+        from rdkit.Chem.Draw import rdMolDraw2D
         drawer = rdMolDraw2D.MolDraw2DCairo(size[0], size[1])
         drawer.DrawMolecule(mol)
         drawer.FinishDrawing()
         img_data = drawer.GetDrawingText()
         return Image.open(io.BytesIO(img_data))
-    except Exception as e:
-        return None
+
+    except:
+        try:
+            # Fallback: simple PIL drawing
+            from rdkit.Chem import Draw
+            return Draw.MolToImage(mol, size=size)
+
+        except:
+            return None
 
 def pred_label(pred):
     return "### **Active**" if pred == 1 else "### **Inactive**"
@@ -164,7 +172,9 @@ if mode == "Single Molecule Prediction":
                         if mol_img:
                             st.image(mol_img, use_container_width=True)
                         else:
-                            st.warning("⚠️ Molecule visualization not supported in this environment.")
+                            st.warning("⚠️ Molecule visualization not supported.")
+                            st.code(smiles_input)
+                            #st.warning("⚠️ Molecule visualization not supported in this environment.")
                         #st.image(mol_img, caption="Query Molecule", width=220)
                         #st.image(mol_img, caption="Query Molecule", use_container_width=True)
 
