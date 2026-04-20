@@ -1,8 +1,9 @@
-# **What is this pCDK1i_v1.0?**
+ 
+**What is this pCDK1i_v1.0?**
 
-**pCDK1i** stands for **p**redictor of **CDK1** **i**nhibitor. 
+<img src="https://github.com/Amincheminfom/Amincheminfom/blob/main/Amincheminfom1.gif?raw=1" alt= “Amincheminfom_logo” width="300" align="right">
 
-It is an online tool hosted on Google Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qQa0GykEpHXavrGyLAdHvFRQ7JsDrvtI?usp=sharing) that predict the CDK1 inhibitory property (1 = Active, 0 = Inactive) of a small molecule and also visualize the molecule.
+**pCDK1i** stands for **p**redictor of **CDK1** **i**nhibitor. It is a <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="Streamlit Logo" width="50"/>-based [Web Application](https://pcdk1iv1.streamlit.app/). that predict the CDK1 inhibitory property (Active or Inactive) of query molecule. This tool also allow bacth prediction.
 
 ---
 This tool is a part of the manuscript:
@@ -10,15 +11,13 @@ This tool is a part of the manuscript:
 
 ---
 
-<img src="https://github.com/Amincheminfom/Amincheminfom/blob/main/Amincheminfom1.gif?raw=1" alt= “Amincheminfom_logo” width="350" align="right">
-
 **How to use this?**
 
-1: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qQa0GykEpHXavrGyLAdHvFRQ7JsDrvtI?usp=sharing)
+The **pCDK1i_v1.0** web application can be used by following [This Link](https://pcdk1iv1.streamlit.app/).
 
-2: Install and import required packages
+1: For Single Molecule Prediction: Just enter a SMILES string or draw from the Sketcher to predict its CDK1 inhibitory class (Active or Inactive)!
 
-3: Provide the Smiles of your query moleucle and run the cell
+2: Batch Prediction: Provide a CSV or Excel File with the Smiles of your query molecules.
 
 ------
 **Example Smiles:**
@@ -27,7 +26,7 @@ This tool is a part of the manuscript:
 `CN1CC[C@H](c2c(O)cc(O)c3c(=O)cc(-c4ccccc4Cl)oc23)C(O)C1`
 
 *2. Known CDK1 Inactive molecule*
-`Cc1cc(Cl)c2cc(C(=O)N[C@H](C)c3ccc(S(=O)(=O)CC(=O)OC(C)(C)C)cc3)n(C)c2c1`
+`CC(C)[C@H](CO)Nc1nc(Nc2ccc(Cl)c(N)c2)c2ncn(C(C)C)c2n1`
 
 *3. Imatinib*
 `Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1`
