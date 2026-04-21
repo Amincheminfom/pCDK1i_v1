@@ -1,13 +1,13 @@
  
 **What is this pCDK1i_v1.0?**
 
-<img src="https://github.com/Amincheminfom/Amincheminfom/blob/main/Amincheminfom1.gif?raw=1" alt= “Amincheminfom_logo” width="300" align="right">
+<img src="https://github.com/Amincheminfom/Amincheminfom/blob/main/Amincheminfom1.gif?raw=1" alt= “Amincheminfom_logo” width="260" align="right">
 
-**pCDK1i** stands for **p**redictor of **CDK1** **i**nhibitor. It is a <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="Streamlit Logo" width="50"/>-based [Web Application](https://pcdk1iv1.streamlit.app/). that predict the CDK1 inhibitory property (Active or Inactive) of query molecule. This tool also allow bacth prediction.
+**pCDK1i** stands for **p**redictor of **CDK1** **i**nhibitor. It is a <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="Streamlit Logo" width="50"/>-based [Web Application](https://pcdk1iv1.streamlit.app/). that predict the CDK1 inhibitory property (Active or Inactive) of query molecule. This tool also allow batch prediction.
 
 ---
 This tool is a part of the manuscript:
-> *Multiscale screening integrating machine learning, molecular dynamics simulations and quantum mechanical calculations to identify novel CDK1 inhibitor targeting cancer*. (under preparation)
+> *Identifying novel inhibitors for CDK1 and developing a predictive tool (pCDK1i_v1.0) by integrated AI/ML techniques, molecular docking, molecular dynamics simulations and quantum mechanical calculation*. (under preparation)
 
 ---
 
